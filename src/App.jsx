@@ -1,9 +1,15 @@
-import MainPageComponent from "./main/index";
+import { Suspense } from "react";
+import { BrowserRouter } from "react-router-dom";
+import RouterConfig from "./RouterConfig";
 
 const App = () => {
   return (
     <>
-      <MainPageComponent />
+      <BrowserRouter>
+        <Suspense>
+          <RouterConfig />
+        </Suspense>
+      </BrowserRouter>
     </>
   );
 };
