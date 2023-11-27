@@ -1,18 +1,16 @@
+import "antd/dist/antd.css";
 import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import RouterConfig from "./RouterConfig";
 import "./App.css";
+import Header from "./common/header";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Suspense>
-          <div id="header">
-            <div id="header-area">
-              <img src="/images/icons/logo.png" alt="대체이미지" />
-            </div>
-          </div>
+          <Header />
           <div id="body">
             <RouterConfig />
           </div>
